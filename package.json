@@ -1,39 +1,46 @@
 {
+    "name": "sentinel-react-native-module",
+    "title": "Sentinel React Native Module",
+    "version": "1.0.0",
+    "description": "TODO",
     "main": "index.js",
+    "files": [
+        "README.md",
+        "android",
+        "index.js",
+        "ios",
+        "sentinel-react-native-module.podspec"
+    ],
     "scripts": {
-        "android": "react-native run-android",
-        "ios": "react-native run-ios",
-        "web": "expo start --web",
-        "start": "react-native start",
         "test": "jest"
     },
-    "dependencies": {
-        "expo": "~40.0.0",
-        "expo-splash-screen": "~0.8.0",
-        "expo-status-bar": "~1.0.3",
-        "expo-updates": "~0.4.0",
-        "react": "16.13.1",
-        "react-dom": "16.13.1",
-        "react-native": "~0.63.4",
-        "react-native-gesture-handler": "~1.8.0",
-        "react-native-reanimated": "~1.13.0",
-        "react-native-screens": "~2.15.0",
-        "react-native-unimodules": "~0.12.0",
-        "react-native-web": "~0.13.12"
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git",
+        "baseUrl": "https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module"
+    },
+    "keywords": [
+        "react-native"
+    ],
+    "author": {
+        "name": "Your Name",
+        "email": "yourname@email.com"
+    },
+    "license": "MIT",
+    "licenseFilename": "LICENSE",
+    "readmeFilename": "README.md",
+    "peerDependencies": {
+        "react": ">=16.8.1",
+        "react-native": ">=0.60.0-rc.0 <1.0.x"
     },
     "devDependencies": {
-        "@babel/core": "^7.9.0",
-        "@testing-library/jest-native": "^4.0.1",
-        "@testing-library/react-native": "^7.2.0",
-        "babel-jest": "~25.2.6",
-        "jest-expo": "^40.0.2",
-        "react-test-renderer": "^17.0.2"
+        "jest": "^26.6.3",
+        "react": "^16.9.0",
+        "react-native": "^0.61.5"
     },
     "jest": {
-        "preset": "jest-expo",
         "transformIgnorePatterns": [
-            "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
+            "node_modules/(?!(react-native|sentinel-react-native-module)/)"
         ]
-    },
-    "private": true
+    }
 }

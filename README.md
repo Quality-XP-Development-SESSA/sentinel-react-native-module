@@ -14,22 +14,19 @@ git clone https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-
 cd sentinel-react-native-module && yarn install
 ```
 
-### Install the Pod dependencies
+## Getting started
 
 ```sh
-npx pod-install
+$ yarn add sentinel-react-native-module --save
 ```
 
-### Running on iOS.
+## Usage
 
-```sh
-yarn ios
-```
+```javascript
+import SentinelReactNativeModule from 'sentinel-react-native-module'
 
-### Running on Android.
-
-```sh
-yarn android
+// TODO: What to do with the module?
+SentinelReactNativeModule
 ```
 
 ### Run test.

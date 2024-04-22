@@ -1,21 +1,35 @@
-import { NativeModules } from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 
-const { AuthModule, SentinelSDKModule } = NativeModules;
+const LINKING_ERROR =
+  `The package 'sentinelsdk' doesn't seem to be linked. Make sure: \n\n` +
+  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
+  '- You rebuilt the app after installing the package\n' +
+  '- You are not using Expo Go\n';
 
-// interface AuthenticationModule {
-//   helloKotlin: () => Promise<string>;
-// }
+const AuthModule = NativeModules.AuthModule
+  ? NativeModules.AuthModule
+  : new Proxy(
+      {},
+      {
+        get() {
+          throw new Error(LINKING_ERROR);
+        },
+      }
+    );
 
-// export const authModule = AuthModule as AuthenticationModule;
-
-export function multiply(a: number, b: number): Promise<number> {
-  return SentinelSDKModule.multiply(a, b);
+//AUTH MODULE
+export function signIn(userName: string, password: string): Promise<Boolean> {
+  return AuthModule.signIn(userName, password);
 }
 
-// export function helloKotlinTest(): Promise<string> {
-//   return SentinelSDKModule.helloKotlinTest();
-// }
+export function recoverPassword(email: string): Promise<Boolean> {
+  return AuthModule.recoverPassword(email);
+}
 
-export function helloKotlin(): Promise<string> {
-  return AuthModule.helloKotlin();
+export function signOut(): Promise<Boolean> {
+  return AuthModule.signOut();
+}
+
+export function accountType():  Promise<string> {
+  return AuthModule.accountType();
 }

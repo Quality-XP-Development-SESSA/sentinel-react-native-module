@@ -1,8 +1,31 @@
-# sentinel-react-native-module
+# sentinelsdk
 
-# Project Setup
- - `npm install` to install all dependencies
- - `npm pack` to generate the npm package. Generate a tgz file, you need to copy and paste it in the same path where you have the project in which you're going to install it.
+sentinel plugin
 
- # Install the package in a project
-  - `npm install "file:../../sentinelsdk-0.1.0.tgz"` to install the package. In the "file" specify the path to the root directory where the "sentinelsdk-0.1.0.tgz" file is located
+## Installation
+
+```sh
+npm install sentinelsdk
+```
+
+## Usage
+
+```js
+import { multiply } from 'sentinelsdk';
+
+// ...
+
+const result = await multiply(3, 7);
+```
+
+## Contributing
+
+See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+
+## License
+
+MIT
+
+---
+
+Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

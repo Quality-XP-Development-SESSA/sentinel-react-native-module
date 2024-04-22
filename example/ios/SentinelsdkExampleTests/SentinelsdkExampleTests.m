@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface SentinelSDKModuleExampleTests : XCTestCase
+@interface SentinelsdkExampleTests : XCTestCase
 
 @end
 
-@implementation SentinelSDKModuleExampleTests
+@implementation SentinelsdkExampleTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

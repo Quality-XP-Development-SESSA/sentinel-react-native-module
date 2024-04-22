@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  SentinelSDKModuleExample
+//  SentinelsdkExample
 //
 
 import Foundation

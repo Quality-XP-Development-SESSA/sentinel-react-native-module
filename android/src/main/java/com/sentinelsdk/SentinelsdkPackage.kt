@@ -23,7 +23,8 @@ class SentinelsdkPackage : ReactPackage {
     return mutableListOf(
       SentinelsdkModule(reactContext),
       AuthModule(reactContext),
-      CustomerModule(reactContext)
+      CustomerModule(reactContext),
+      LocationsModule(reactContext),
     )
   }
 

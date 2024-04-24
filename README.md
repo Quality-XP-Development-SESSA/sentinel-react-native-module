@@ -1,38 +1,31 @@
-# sentinel-react-native-module
+# sentinelsdk
 
-### Set up
+sentinel plugin
 
--   Clone repository:
-
-```sh
-git clone https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git
-```
-
--   Make sure you have node, npm, yarn and React Native installed, and run:
+## Installation
 
 ```sh
-cd sentinel-react-native-module && yarn install
-```
-
-## Getting started
-
-```sh
-$ yarn add sentinel-react-native-module --save
+npm install sentinelsdk
 ```
 
 ## Usage
 
-```javascript
-import SentinelReactNativeModule from 'sentinel-react-native-module'
+```js
+import { multiply } from 'sentinelsdk';
 
-// TODO: What to do with the module?
-SentinelReactNativeModule
+// ...
+
+const result = await multiply(3, 7);
 ```
 
-### Run test.
+## Contributing
 
--   Testing Framework: [Jest](https://jestjs.io)
+See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
-```sh
-yarn test
-```
+## License
+
+MIT
+
+---
+
+Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

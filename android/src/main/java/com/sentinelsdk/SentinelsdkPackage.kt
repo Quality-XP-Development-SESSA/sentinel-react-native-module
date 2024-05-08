@@ -28,6 +28,7 @@ class SentinelsdkPackage : ReactPackage {
       DevicesModule(reactContext),
       ControllerModule(reactContext),
       WifiDiscovery(reactContext),
+      AppInfoModule(reactContext),
     )
   }
 

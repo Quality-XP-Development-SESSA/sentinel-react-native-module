@@ -17,7 +17,7 @@ import com.facebook.react.bridge.Arguments
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
-class WifiDiscoveryModule(reactContext: ReactApplicationContext) :
+class WifiDiscovery(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
 
   override fun getName(): String {

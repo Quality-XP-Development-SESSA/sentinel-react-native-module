@@ -30,6 +30,6 @@ export function signOut(): Promise<Boolean> {
   return AuthModule.signOut();
 }
 
-export function accountType():  Promise<string> {
+export function accountType(): Promise<string> {
   return AuthModule.accountType();
 }

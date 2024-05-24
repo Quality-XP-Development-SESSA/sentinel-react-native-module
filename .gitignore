@@ -205,3 +205,6 @@ buck-out/
 # Bundle artifacts
 *.jsbundle
 
+# lib folder
+
+lib/

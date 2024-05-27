@@ -12,4 +12,8 @@ class AppInfoModule: RCTEventEmitter {
 
     resolve(info)
   }
+
+  override static func requiresMainQueueSetup() -> Bool {
+    return true;
+  }
 }

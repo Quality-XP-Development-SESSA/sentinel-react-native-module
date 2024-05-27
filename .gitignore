@@ -205,9 +205,6 @@ buck-out/
 # Bundle artifacts
 *.jsbundle
 
-# CocoaPods
-/ios/Pods/
+# lib folder
 
-# Expo
-.expo/*
-web-build/
+lib/

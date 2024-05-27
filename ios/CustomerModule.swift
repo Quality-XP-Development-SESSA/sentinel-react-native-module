@@ -286,4 +286,8 @@ class CustomersModule: RCTEventEmitter {
       }
     }
   }
+
+  override static func requiresMainQueueSetup() -> Bool {
+    return true;
+  }
 }

@@ -1,14 +1,11 @@
-#import <React/RCTBridgeModule.h>
+#import <SentinelSDK.h>
+#import <shared/shared.h>
 
-@interface RCT_EXTERN_MODULE(Sentinelsdk, NSObject)
+@implementation SentinelSDK
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
-
-+ (BOOL)requiresMainQueueSetup
-{
-  return NO;
+- (void)initKoin:(NSString *)host {
+   SharedDatabaseDriverFactory *dbFactory = [[SharedDatabaseDriverFactory alloc] init];
+   [SharedKoin.shared setupHost: host db:dbFactory];
 }
 
 @end

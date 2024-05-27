@@ -2,7 +2,7 @@ import Foundation
 import shared
 
 @objc(DevicesModule)
-class DevicesModule: NSObject {
+class DevicesModule: RCTEventEmitter {
   private let cloudProvider = SentinelProvider.shared.cloudProvider
   private let sessionProvider = SentinelProvider.shared.sessionProvider
   private var devicesServices: DeviceServices
@@ -608,6 +608,10 @@ class DevicesModule: NSObject {
         failureCallback(["ERROR_EDITSENSOR", "Exception", error])
       }
     }
+  }
+
+  override static func requiresMainQueueSetup() -> Bool {
+    return true;
   }
 
 }

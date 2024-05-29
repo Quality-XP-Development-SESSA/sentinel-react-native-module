@@ -17,7 +17,7 @@ class SentinelsdkPackage : ReactPackage {
       modules(module {
           modules(module {
             single<WifiManager> { ConnectionToDevice(reactContext) }
-          }, Koin.sentinelSDKModule("https://app-stage.sensys-iot.com", DatabaseDriverFactory(reactContext)))
+          }, Koin.sentinelSDKModule(SentinelSettings.host, DatabaseDriverFactory(reactContext)))
       })
     }
     return mutableListOf(
@@ -29,6 +29,7 @@ class SentinelsdkPackage : ReactPackage {
       ControllerModule(reactContext),
       WifiDiscovery(reactContext),
       AppInfoModule(reactContext),
+      FirmwareModule(reactContext),
     )
   }
 

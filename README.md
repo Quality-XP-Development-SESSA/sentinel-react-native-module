@@ -21,3 +21,13 @@ After creating the account:
 - > `npm login` to login into NPM account
 - > `npm publish` to publish the plugin into NPM
 
+## To use on IOS
+- > `[[SentinelSDK alloc] initKoin:@"https://app-stage.sensys-iot.com"]` add into app delegate file
+
+## To use on Android
+Add the following variables to initialize required by the plugin in `MainApplication`
+- > `SentinelSettings.host  = "https://app-stage.sensys-iot.com"`
+- > `SentinelSettings.versionCode = BuildConfig.VERSION_CODE`
+- > `SentinelSettings.versionName = BuildConfig.VERSION_NAME`
+- > `SentinelSettings.flavor = BuildConfig.FLAVOR`
+- > `SentinelSettings.isDebug = BuildConfig.DEBUG`

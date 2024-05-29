@@ -29,7 +29,6 @@ class ControllerModule(reactContext: ReactApplicationContext) :
   private val deviceConnect = DeviceOnboardingControllerImpl()
 
   override fun initialize() {
-    super.initialize()
     coroutineScope.launch {
       deviceConnect.addNetworkChangeListener { result ->
         val event = Arguments.createMap()
@@ -87,7 +86,7 @@ class ControllerModule(reactContext: ReactApplicationContext) :
     promise: Promise
   ) {
     coroutineScope.launch {
-      val useStaging = BuildConfig.FLAVOR !== "production"
+      val useStaging = SentinelSettings.flavor
       val resultado = kotlin.runCatching {
         deviceConnect.startOnboarding(
           id_Location,

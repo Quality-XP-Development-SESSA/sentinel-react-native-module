@@ -26,7 +26,7 @@ class AppInfoModule(reactContext: ReactApplicationContext) :
     with(Arguments.createMap()) {
       putString(
         "app_version",
-        "${BuildConfig.VERSION_NAME}(${BuildConfig.VERSION_CODE})${if (BuildConfig.DEBUG) "(DEBUG)" else ""}"
+        "${SentinelSettings.versionName}(${SentinelSettings.versionName})${if (SentinelSettings.isDebug) "(DEBUG)" else ""}"
       )
       putString("sdk_version", BuildConfig.SDK_VERSION)
 

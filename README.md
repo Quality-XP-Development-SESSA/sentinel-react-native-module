@@ -1,38 +1,33 @@
-# sentinel-react-native-module
+# sentinel-react-native-module 
+Plugin repository for React Native, using native modules for both iOS and Android.
 
-### Set up
+# Requirements
+- > Node >= 16
+- > Sentinel SDK xcframework
 
--   Clone repository:
+# Project Setup
+- > Add `s.vendored_frameworks = "ADD THE PATH OF SDK XCFRAMEWORK"` into podspect file
+- > `npm install` to install all dependencies
+- > `cd ios` to move to the IOS folder
+- > Do `pod install` to setup Pods for IOS project
+- > `npm pack` to create the *.tgz file, which ca be installled locally in  a React Native project
 
-```sh
-git clone https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git
-```
+# Install local
+- > Do `npm install with the path of *.tgz file`
 
--   Make sure you have node, npm, yarn and React Native installed, and run:
+# Publish Module
+First, needs to create an account on NPM
+After creating the account:
+- > `npm login` to login into NPM account
+- > `npm publish` to publish the plugin into NPM
 
-```sh
-cd sentinel-react-native-module && yarn install
-```
+## To use on IOS
+- > `[[SentinelSDK alloc] initKoin:@"server url"]` add into app delegate file
 
-## Getting started
-
-```sh
-$ yarn add sentinel-react-native-module --save
-```
-
-## Usage
-
-```javascript
-import SentinelReactNativeModule from 'sentinel-react-native-module'
-
-// TODO: What to do with the module?
-SentinelReactNativeModule
-```
-
-### Run test.
-
--   Testing Framework: [Jest](https://jestjs.io)
-
-```sh
-yarn test
-```
+## To use on Android
+Add the following variables to initialize required by the plugin in `MainApplication`
+- > `SentinelSettings.host  = "server url"`
+- > `SentinelSettings.versionCode = BuildConfig.VERSION_CODE`
+- > `SentinelSettings.versionName = BuildConfig.VERSION_NAME`
+- > `SentinelSettings.flavor = BuildConfig.FLAVOR`
+- > `SentinelSettings.isDebug = BuildConfig.DEBUG`

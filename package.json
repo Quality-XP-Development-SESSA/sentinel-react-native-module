@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git/sentinelsdk.git"
+    "url": "git+https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git"
   },
-  "author": "ArianaQXD <aquesada@qxdev.com> (https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git)",
+  "author": "Quality XP Development (https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git/sentinelsdk/issues"
+    "url": "https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git/issues"
   },
-  "homepage": "https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git/sentinelsdk#readme",
+  "homepage": "https://github.com/Quality-XP-Development-SESSA/sentinel-react-native-module.git#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

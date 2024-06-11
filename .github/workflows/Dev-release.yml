@@ -35,7 +35,6 @@ jobs:
           VERSION=$(jq -r ".version" package.json)
           ALPHA_VERSION="${VERSION}-alpha"
           jq ".version = \"$ALPHA_VERSION\"" package.json > package.json.tmp && mv package.json.tmp package.json
-          echo "Updated version to $ALPHA_VERSION"
       - name: Publish package
         run: npm publish
         env:

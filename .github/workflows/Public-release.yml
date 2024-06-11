@@ -5,7 +5,7 @@ name: Sentinel React Native Plugin Release
 on:
   push:
     tags:
-      - "release/production/**"
+      - "release/public/**"
 jobs:
   build:
     runs-on: ubuntu-latest

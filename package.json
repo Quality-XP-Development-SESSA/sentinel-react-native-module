@@ -1,5 +1,5 @@
 {
-  "name": "sentinelsdkplugin",
+  "name": "sentinel-react-native-module",
   "version": "0.1.0",
   "description": "sentinel plugin",
   "main": "lib/commonjs/index",

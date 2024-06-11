@@ -29,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Update version to alpha
-        run: sed -i 's/"version": "\(.*\)"/"version": "\1-alpha"/' package.json
+        run: sed -i 's/"version:" "\(.*\)"/"version:" "\1-alpha"/' package.json
       - name: Publish package
         run: npm publish
         env:

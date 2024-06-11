@@ -1,6 +1,6 @@
 {
   "name": "qxd-sentinel-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1-alpha.0",
   "description": "sentinel plugin",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
